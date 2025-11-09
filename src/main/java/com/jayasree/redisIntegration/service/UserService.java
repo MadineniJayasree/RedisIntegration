@@ -1,8 +1,10 @@
-package com.jayasree.service;
+package com.jayasree.redisIntegration.service;
 
-import com.jayasree.model.User;
+import com.jayasree.redisIntegration.model.User;
 import org.springframework.cache.annotation.Cacheable;
+import org.springframework.stereotype.Service;
 
+@Service
 public class UserService {
     @Cacheable(value = "users",key="#id")
     public User getUserById(int id){

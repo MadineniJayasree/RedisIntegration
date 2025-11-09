@@ -1,4 +1,4 @@
-package com.jayasree.model;
+package com.jayasree.redisIntegration.model;
 
 import java.io.Serializable;
 

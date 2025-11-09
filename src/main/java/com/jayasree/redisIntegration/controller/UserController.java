@@ -1,9 +1,10 @@
-package com.jayasree.controller;
+package com.jayasree.redisIntegration.controller;
 
-import com.jayasree.model.User;
-import com.jayasree.service.UserService;
+import com.jayasree.redisIntegration.model.User;
+import com.jayasree.redisIntegration.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -16,7 +17,7 @@ public class UserController {
         this.userService = userService;
     }
     @GetMapping("/{id}")
-    public User getUserById(int id){
+    public User getUserById(@PathVariable int id){
         return userService.getUserById(id);
     }
 }
